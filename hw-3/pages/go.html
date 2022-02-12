@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url(/assets/img/Logos-3-1.jpg);
+        }
+
+        nav {
+            text-align: left;
+        }
+
+        audio {
+            border: 20px;
+            background: rgb(8, 40, 185);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Страница поиска атомобиля вашей мечты.</h1>
+        <nav>
+            <!-- Навигация на другие страницы -->
+            <ul>
+                <li><a href="../index.html">Главная</a></li>
+
+                <li><a href="./reg.html">Регистрация</a></li>
+
+                <li><a href="./autorisation.html">Авторизация</a></li>
+            </ul>
+        </nav>
+        <p><b>Пока вы с нами - послушайте музыку.</b> <br> Возможно громкое звучание.</p>
+        <audio src="http://icecast.radiorocks.cdnvideo.ru/roks.stream#EXTINF:-1" controls></audio>
+    </header>
+    <main>
+        <h2>Выберите марку автомобиля и его параметры.</h2>
+        <form action="https://fom.in.ua/echo" method="post" target="_blank">
+            <div>
+                <div>
+
+                    <label for="carbodytype">
+                        <p>Тип кузова автомобиля:</p>
+                    </label>
+                    <select id="carbodytype" name="carbodytype">
+                        <option value="sedan">Седан</option>
+                        <option value="coupe">Купе</option>
+                        <option value="cabriolet">Кабриолет</option>
+                        <option value="phaeton">Фаэтон</option>
+                        <option value="roadster">Родстер</option>
+                        <option value="pickup">Пикап</option>
+                        <option value="limousine">Лимузин</option>
+                        <option value="stationwagon">Универсал</option>
+                        <option value="hatchback">Хэтчбек</option>
+                        <option value="suv">Внедорожник</option>
+                        <option value="crossover">Кроссовеp</option>
+                        <option value="van">Минивэн</option>
+                    </select>
+
+                </div>
+                <div>
+
+                    <label for="carmodel">
+                        <p>Марка автомобиля:</p>
+                    </label>
+                    <select id="carmodel" name="carmodel">
+                        <option value="volkswagen">Volkswagen</option>
+                        <option value="mercedesbenz">Mercedes-Benz</option>
+                        <option value="ford">Ford</option>
+                        <option value="bmw">BMW</option>
+                        <option value="audi">Audi</option>
+                        <option value="peugeot">Peugeot</option>
+                        <option value="mitsubishi">Mitsubishi</option>
+                        <option value="jeep">Jeep</option>
+                        <option value="dodge">Dodge</option>
+                        <option value="zaz">ЗАЗ</option>
+                        <option value="chery">Chery</option>
+                        <option value="pontiac">Pontiac</option>
+                        <option value="tesla">Tesla</option>
+                    </select>
+
+                </div>
+                <div>
+
+                    <label for="country">
+                        <p>Страна поставки:</p>
+                    </label>
+                    <select id="country" name="country">
+                        <option value="USA">США</option>
+                        <option value="Canada">Канада</option>
+                        <option value="France">Франция</option>
+                        <option value="Japan">Япония</option>
+                        <option value="China">Китай</option>
+                        <option value="Germany">Германия</option>
+                        <option value="Russia">Россия</option>
+                        <option value="Ukraine">Украина</option>
+                    </select>
+
+                </div>
+                <div>
+                    <p>Цена (от и до)</p>
+                    <label for="min-price">От </label>
+                    <input id="min-price" type="number" name="min-interval" min="0" value="0">
+                    <label for="max-price">До </label>
+                    <input id="max-price" type="number" name="max-interval" max="150000" value="150000">
+                </div>
+                <div>
+                    <p>Год выпуска (от и до)</p>
+                    <label for="min-year">От </label>
+                    <input type="number" name="min-interval" min="1970" value="1970">
+                    <label for="max-year">До </label>
+                    <input type="number" name="max-interval" max="2022" value="2022">
+                </div>
+                <div>
+                    <div>
+                        <p>Состояние автомобиля</p>
+                        <label><input type="radio" name="condition" value="new" checked />Новая</label>
+                        <label><input type="radio" name="condition" value="previously-used" checked />Б/у</label>
+                    </div>
+                    <div>
+                        <p>Таможенный статус</p>
+                        <label><input type="radio" name="customs-condition" value="customs-cleared"
+                                checked />Растаможеная</label>
+                        <label><input type="radio" name="customs-condition" value="not-cleared" checked />Не
+                            растаможеная</label>
+                    </div>
+
+                    <div>
+                        <p>Пункты для Б/у автомобилей:</p>
+                        <label><input type="checkbox" name="condition" value="broken" />Битая</label>
+                        <label><input type="checkbox" name="condition" value="recessed" />Утопленная</label>
+                        <label><input type="checkbox" name="condition" value="factory-refurbished" />Заводское
+                            востановление</label>
+                    </div>
+                </div>
+                <div>
+                    <p> Тип топлива</p>
+                    <label><input type="radio" name="fuel-condition" value="petrol" checked />Бензин</label>
+                    <label><input type="radio" name="fuel-condition" value="diesel" checked />Дизель</label>
+                    <label><input type="radio" name="fuel-condition" value="electricity" checked />Электричество</label>
+                    <label><input type="radio" name="fuel-condition" value="combined" checked />Комбинированное</label>
+                </div>
+                <div>
+                    <p> Тип коробки передач</p>
+                    <label><input type="radio" name="transmission" value="mechanics" checked />Механика</label>
+                    <label><input type="radio" name="transmission" value="automatic" checked />Автомат</label>
+                    <label><input type="radio" name="transmission" value="robot" checked />Робот</label>
+                </div>
+                <div>
+                    <label for="autocolor">Цвет автомобиля:</label>
+                    <input type="color" id="autocolor" name="autocolor" value="#ffffff">
+                </div>
+                <div>
+                    <p> Комфорт</p>
+                    <label><input type="checkbox" name="condition" value="hatch" />Люк</label>
+                    <label><input type="checkbox" name="condition" value="leather-interior" />Кожаный салон</label>
+                    <label><input type="checkbox" name="condition" value="alloy-wheels" />Легкосплавные
+                        диски</label>
+                    <label><input type="checkbox" name="condition" value="audiovideosystem" />Аудио и видео
+                        система</label>
+                    <label><input type="checkbox" name="condition" value="alarm" />Сигнализация</label>
+                </div>
+                <div>
+                    <p><b>Ваши пожелания и дополнения к выбору автомобиля</b></p>
+                    <label>
+                        <textarea name="feedback" rows="5" cols="50"
+                            placeholder="Ваши пожелания и дополнения к выбору автомобиля..."></textarea>
+                    </label>
+                </div>
+                <input type="submit" value="Submit">
+            </div>
+
+
+        </form>
+
+    </main>
+    <footer>
+        <h2>Время работы</h2>
+        <h3>10:00 - 19:00</h3>
+        <h2>Наши контакты:</h2>
+        <div>
+            <span>Tel:</span>
+            <a href="tel:+380561111111">+38(056)111-11-11</a>
+        </div>
+        <div>
+            <span>Email:</span>
+            <a href="mailto:autocarallworld@gmail.com">autocarallworld@gmail.com</a>
+        </div>
+        <menu>
+            <li>
+                <a href="https://www.instagram.com/">Instagram</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com">Facebook</a>
+            </li>
+        </menu>
+        <p>&#169; Copyright 2020</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>
